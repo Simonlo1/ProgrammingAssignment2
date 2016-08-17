@@ -2,21 +2,21 @@
 ## of inverted matrix by caching previously calculated result.
 ##
 ## makeCacheMatrix create a special matrix object (list):
-##      sm <- makeCacheMatrix(x) : Return a special matrix object initialized with x
-##      sm$set(x) : Set storedd matrix to x and clear cached inverted result
-##      sm$get() : Return the original stored matrix object
-##      sm$setinverse(ix) : Store a calculated inverted matrix. Used by cacheSolve
-##      sm$getinverse() : return the stored inverted matrix. Used by cacheSolve
+##      mat <- makeCacheMatrix(x) : Return a special matrix object initialized with x
+##      mat$set(x) : Set stored matrix to x and clear cached inverted result
+##      mat$get() : Return the original stored matrix object
+##      mat$setinverse(ix) : Store a calculated inverted matrix. Used by cacheSolve
+##      mat$getinverse() : return the stored inverted matrix. Used by cacheSolve
 ##
 ## cacheSolve return the inverted matrix by calculating it or, if
 ##    it as already been calculated, using previously calculated result:
-##      cacheSolve(sm) : Return the inverted matrix of sm
+##      cacheSolve(mat) : Return the inverted matrix of mat
 ## 
 ## Usage :
-## 1. Initialise special matrix object by using sm <- makeCacheMatrix(m) where
+## 1. Initialise special matrix object by using mat <- makeCacheMatrix(m) where
 ##    m is a square invertible matrix.
 ##
-## 2. cacheSolve(sm) will return the inverted matrix by calculating it or, if
+## 2. cacheSolve(mat) will return the inverted matrix by calculating it or, if
 ##    it as already neen calculated, the previously calculated result.
 
 ## makeCacheMatrix return a special matrix object (list) to store the matrix
